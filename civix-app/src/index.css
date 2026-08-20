@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+
+  --color-brand-blue: #2f5fe0;
+  --color-brand-blue-dark: #2549b3;
+  --color-brand-ink: #0b1b33;
+  --color-brand-muted: #6b7280;
+  --color-brand-line: #e6e9f0;
+  --color-brand-card: #f4f6fb;
+  --color-brand-green: #16a34a;
+  --color-brand-green-bg: #e8f7ee;
+  --color-brand-amber: #d97706;
+  --color-brand-amber-bg: #fef3e0;
+  --color-brand-red: #dc2626;
+  --color-brand-red-bg: #fdeaec;
+  --color-brand-teal: #17a398;
+  --color-brand-orange: #f5941f;
+  --color-brand-navy: #0b1526;
+}
+
+body {
+  background: #f4f6fb;
+  color: var(--color-brand-ink);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+@layer components {
+  .input {
+    @apply w-full border border-brand-line rounded-xl px-3 py-2.5 text-sm text-brand-ink placeholder:text-gray-400 outline-none focus:border-brand-blue transition-colors;
+  }
+  .btn-primary {
+    @apply bg-brand-blue text-white font-bold text-sm rounded-xl py-3 hover:bg-brand-blue-dark transition-colors disabled:opacity-60;
+  }
+  .btn-outline {
+    @apply bg-white text-brand-blue border border-brand-blue font-bold text-sm rounded-xl py-3 hover:bg-brand-card transition-colors;
+  }
+  .card {
+    @apply bg-white border border-brand-line rounded-2xl;
+  }
+  .section-label {
+    @apply text-[11px] font-bold uppercase tracking-wide text-brand-ink;
+  }
+}
