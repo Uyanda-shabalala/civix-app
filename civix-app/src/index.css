@@ -51,4 +51,7 @@ body {
   .section-label {
     @apply text-[11px] font-bold uppercase tracking-wide text-brand-ink;
   }
+  .field {
+    @apply w-full flex items-center gap-2 border border-brand-line rounded-xl px-3 py-2.5 bg-white;
+  }
 }
